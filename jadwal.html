@@ -19,6 +19,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
     <link rel="stylesheet" type="text/css" href="/css/index.css" />
+    <script src="https://cdn.datatables.net/2.1.3/js/dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.3/css/dataTables.dataTables.min.css">
 
     <title>Tennis Score | Jadwal Pertandingan</title>
 
@@ -147,6 +149,10 @@
                 axios.get(BASE_URL + "/api/jadwal").then((res) => {
                     console.log("res", res)
                     this.jadwals = res.data
+
+                    setTimeout(() => {
+                        $(".table").dataTable()
+                    }, 500);
                 }).catch((err) => {
                     console.log("err", err)
                 })
