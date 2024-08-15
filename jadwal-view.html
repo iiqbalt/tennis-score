@@ -62,6 +62,12 @@
             color: #fc4cf8;
         }
 
+        hr {
+            margin: 3px 15px;
+            border-color: #fc4cf8;
+            border-width: 2px;
+        }
+
         .pukul {
             color: white;
             font-size: 18px;
@@ -106,6 +112,15 @@
                                             <small class="vs">vs</small>
                                             {{match.player_dua}}
                                             <div class="pukul">Pukul : {{match.jam}}</div>
+
+                                            <div v-if="match.data_json != null">
+                                                <hr>
+                                                <div class="text-center">
+                                                    <span>{{match.score_1}}</span>
+                                                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                                    <span>{{match.score_2}}</span>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 </table>
@@ -120,6 +135,15 @@
                                             <small class="vs">vs</small>
                                             {{match.player_dua}}
                                             <div class="pukul">Pukul : {{match.jam}}</div>
+
+                                            <div v-if="match.data_json != null">
+                                                <hr>
+                                                <div class="text-center">
+                                                    <span>{{match.score_1}}</span>
+                                                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                                    <span>{{match.score_2}}</span>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 </table>
@@ -133,6 +157,15 @@
                                             <small class="vs">vs</small>
                                             {{match.player_dua}}
                                             <div class="pukul">Pukul : {{match.jam}}</div>
+
+                                            <div v-if="match.data_json != null">
+                                                <hr>
+                                                <div class="text-center">
+                                                    <span>{{match.score_1}}</span>
+                                                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                                    <span>{{match.score_2}}</span>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 </table>
@@ -146,6 +179,15 @@
                                             <small class="vs">vs</small>
                                             {{match.player_dua}}
                                             <div class="pukul">Pukul : {{match.jam}}</div>
+
+                                            <div v-if="match.data_json != null">
+                                                <hr>
+                                                <div class="text-center">
+                                                    <span>{{match.score_1}}</span>
+                                                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                                    <span>{{match.score_2}}</span>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 </table>
@@ -159,6 +201,15 @@
                                             <small class="vs">vs</small>
                                             {{match.player_dua}}
                                             <div class="pukul">Pukul : {{match.jam}}</div>
+
+                                            <div v-if="match.data_json != null">
+                                                <hr>
+                                                <div class="text-center">
+                                                    <span>{{match.score_1}}</span>
+                                                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                                    <span>{{match.score_2}}</span>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 </table>
@@ -172,6 +223,15 @@
                                             <small class="vs">vs</small>
                                             {{match.player_dua}}
                                             <div>Pukul : {{match.jam}}</div>
+
+                                            <div v-if="match.data_json != null">
+                                                <hr>
+                                                <div class="text-center">
+                                                    <span>{{match.score_1}}</span>
+                                                    <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                                    <span>{{match.score_2}}</span>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                 </table>

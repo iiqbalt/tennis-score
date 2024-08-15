@@ -143,6 +143,20 @@ module.exports = {
                         is_deleted: 0
                     }
                 })
+
+                let outputMatch = []
+                for (const match of matches) {
+                    let obj = match
+                    obj.score_1 = null
+                    obj.score_2 = null
+
+                    if (match.data_json != null) {
+                        let json = JSON.parse(match.data_json)
+                        obj.score_1 = json.state.playerSetsWon[0]
+                        obj.score_2 = json.state.playerSetsWon[1]
+                    }
+                    outputMatch.push(obj)
+                }
                 details.push({
                     court: parseInt(court_no),
                     match: matches
