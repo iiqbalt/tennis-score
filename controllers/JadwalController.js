@@ -145,8 +145,8 @@ module.exports = {
 
                     if (match.data_json != null) {
                         let json = JSON.parse(match.data_json)
-                        obj.score_1 = json.state.playerSetsWon[0]
-                        obj.score_2 = json.state.playerSetsWon[1]
+                        obj.score_1 = json.state.games[0][0]
+                        obj.score_2 = json.state.games[0][1]
                     }
                     outputMatch.push(obj)
                 }
