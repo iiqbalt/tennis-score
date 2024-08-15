@@ -307,6 +307,23 @@
                     // });
 
                     this.jadwals = res.data
+
+                    let count_data = res.data?.length
+                    let time = 1000 * 100
+                    if (count_data != 0) {
+                        time = 1000 * count_data
+                    }
+
+                    console.log("time : ", time)
+
+                    setTimeout(() => {
+                        $('html, body').animate({ scrollTop: $(document).height() - $(window).height() }, time, function () {
+                            $(this).animate({ scrollTop: 0 }, 1000);
+                            setTimeout(() => {
+                                window.location.reload()
+                            }, 3000);
+                        })
+                    }, 3000);
                 }).catch((err) => {
                     console.log("err", err)
                 })
