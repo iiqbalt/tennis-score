@@ -89,7 +89,7 @@
             <table class="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
-                        <!-- <th class="text-pink">Match</th> -->
+                        <th class="text-pink">Match</th>
                         <th style="width: 300px;" class="text-center text-pink">Court No.#1</th>
                         <th style="width: 300px;" class="text-center text-pink">Court No.#2</th>
                         <th style="width: 300px;" class="text-center text-pink">Court No.#3</th>
@@ -101,7 +101,7 @@
                 <tbody>
                     <template v-for="(item, index) in jadwals">
                         <tr>
-                            <!-- <td>{{readableTanggal(item.tanggal)}}</td> -->
+                            <td>{{readableTanggal(item.tanggal)}}</td>
                         
                             <td style="padding: 0px;">
                                 
@@ -222,7 +222,6 @@
                                             {{match.player_satu}}
                                             <small class="vs">vs</small>
                                             {{match.player_dua}}
-                                            <div>Pukul : {{match.jam}}</div>
 
                                             <div v-if="match.data_json != null">
                                                 <hr>
