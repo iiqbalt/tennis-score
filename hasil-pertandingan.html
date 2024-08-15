@@ -107,7 +107,8 @@
 </body>
 
 <script>
-    const BASE_URL = "http://localhost:8080"
+    var ip = location.host;
+    const BASE_URL = "http://" + ip
     $(document).ready(function(){
         const queryString = location.search;
         const urlParams = new URLSearchParams(queryString);

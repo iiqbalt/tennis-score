@@ -388,7 +388,8 @@
 </body>
 
 <script>
-	const BASE_URL = "http://localhost:8080"
+	var ip = location.host;
+	const BASE_URL = "http://" + ip
 	const { createApp } = Vue
 	const app = createApp({
 		data() {
