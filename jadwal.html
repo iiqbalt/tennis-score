@@ -56,13 +56,10 @@
                             <input v-model="player_dua" type="text" name="player_2" id="" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label class="control-label">Tanggal/Jam</label>
+                            <label class="control-label">Tanggal</label>
                             <div class="row">
                                 <div class="col-md-9">
                                     <input v-model="tanggal" type="date" name="tanggal" id="" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <input v-model="jam" type="time" name="jam" id="" class="form-control col-md-3">
                                 </div>
                             </div>
                         </div>
@@ -87,7 +84,7 @@
                     <tr>
                         <th style="width: 10px;">No</th>
                         <th>Players</th>
-                        <th class="text-center" style="width: 230px;">Tanggal/Jam</th>
+                        <th class="text-center" style="width: 230px;">Tanggal</th>
                         <th style="width: 130px" class="text-center">Court No.</th>
                         <th class="text-center" style="width: 200px;">#</th>
                     </tr>
@@ -163,7 +160,6 @@
                     player_dua: this.player_dua,
                     room: this.room,
                     tanggal: this.tanggal,
-                    jam: this.jam,
                     id: this.id
                 }).then((res) => {
                     console.log("res", res)
@@ -193,13 +189,8 @@
                 $("#modal-new").modal("show")
             },
             formatTanggal(item){
-                let jam = item.jam
-                if (item.jam == null) {
-                    jam = "00:00"
-                }
-
                 let tanggal = item.tanggal.split("T")[0]
-                return moment(tanggal + "T" + item.jam + ":00.000Z").format('MMMM Do YYYY') + ", " + jam;
+                return moment(item.tanggal).format('MMMM Do YYYY');
             }
         },
         mounted(){

@@ -44,11 +44,6 @@ module.exports = {
                     messages: "Tanggal tidak boleh kosong"
                 })
             }
-            if (body.jam == undefined) {
-                res.status(404).json({
-                    messages: "Jam tidak boleh kosong"
-                })
-            }
 
             if (body.id != undefined) {
                 const findJadwal = await prisma.jadwalPertandingan.findUnique({ where: { id: body.id } })
@@ -62,7 +57,6 @@ module.exports = {
                             player_dua: body.player_dua,
                             room: body.room,
                             tanggal: new Date(body.tanggal),
-                            jam: body.jam
                         }
                     })
 
@@ -79,7 +73,6 @@ module.exports = {
                         player_dua: body.player_dua,
                         room: body.room,
                         tanggal: new Date(body.tanggal),
-                        jam: body.jam,
                         is_deleted: 0
                     }
                 })
